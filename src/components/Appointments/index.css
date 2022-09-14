@@ -1,0 +1,81 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, pink, #8080f9);
+  overflow: auto;
+}
+
+.contentContainer {
+  width: 80vw;
+  background-color: white;
+  border-radius: 15px;
+  height: 80vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  padding-left: 90px;
+  padding-top: 50px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  align-items: flex-start;
+}
+
+label {
+  margin-top: 5px;
+}
+.titleInput {
+  width: 300px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.DateInput {
+  border-radius: 5px;
+  width: 300px;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.submitButton {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #8080f9;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+.AppointmentContainer {
+  width: 100vw;
+  padding: 20px;
+  overflow: auto;
+}
+
+.appointment-heading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.starredButton {
+  padding: 15px;
+  margin-right: 20px;
+  background-color: transparent;
+  border: 1px orange solid;
+  border-radius: 15px;
+}
+.Appointments {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

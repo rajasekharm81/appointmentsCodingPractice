@@ -1,0 +1,36 @@
+.appointmentContainer {
+  margin-right: 30px;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.appointment {
+  border: 1px black solid;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 23vw;
+  padding: 10px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.starContainer {
+  display: flex;
+  align-self: flex-start;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.star {
+  height: 45px;
+}
+
+.starButton {
+  background-color: transparent;
+  border: none;
+  height: fit-content;
+}
