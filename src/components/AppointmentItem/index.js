@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import Moment from 'moment'
+import {format} from 'date-fns'
 import './index.css'
 
 class AppointmentItem extends Component {
@@ -8,26 +8,28 @@ class AppointmentItem extends Component {
     toggleStar(id)
   }
 
+  formattedDate = () => {
+    const {date} = this.props
+    return format(new Date(date.date), 'd MMMM yyyy, EEEE')
+  }
+
   render() {
     const {appointments} = this.props
     const starImg = appointments.isStarred
       ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
       : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
 
-    console.log(appointments.title)
+    const fordate = this.formattedDate()
     return (
       <li className="appointmentContainer">
         <div className="appointment">
           <div>
             <p>{appointments.title.title}</p>
-            <p>
-              Date:{' '}
-              {Moment(appointments.date.date).format('DD MMMM YYYY, dddd')}
-            </p>
+            <p className="datePara">Date: {fordate}</p>
           </div>
           <div className="starContainer">
             <button
-              id="star"
+              testid="star"
               onClick={this.starring}
               className="starButton"
               type="button"

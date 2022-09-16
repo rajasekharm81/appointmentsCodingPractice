@@ -35,19 +35,10 @@ class Appointments extends Component {
     const {title, date, appointments} = this.state
 
     if (title === '') {
-      ;<Popup>
-        <div>
-          <h1>Please Enter Text</h1>
-        </div>
-      </Popup>
       return
     }
+
     if (date === '') {
-      ;<Popup>
-        <div>
-          <h1>Please Enter Date</h1>
-        </div>
-      </Popup>
       return
     }
 
@@ -66,7 +57,7 @@ class Appointments extends Component {
     const Starred = appointments.filter(each => each.isStarred)
 
     const filterItems = isStarred ? Starred : appointments
-
+    const StarredButtonClass = isStarred ? 'starred' : 'starredButton'
     return (
       <div className="mainContainer">
         <div className="contentContainer">
@@ -109,7 +100,7 @@ class Appointments extends Component {
               <h1>Appointments</h1>
               <button
                 onClick={this.isStarredUpdate}
-                className="starredButton"
+                className={StarredButtonClass}
                 type="button"
               >
                 Starred
@@ -122,6 +113,7 @@ class Appointments extends Component {
                   key={each.id}
                   toggleStar={this.toggleStar}
                   appointments={each}
+                  date={each.date}
                 />
               ))}
             </ul>
